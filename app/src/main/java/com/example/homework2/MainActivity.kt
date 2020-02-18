@@ -22,5 +22,9 @@ class MainActivity : AppCompatActivity() {
         test_button.setOnClickListener {
             startActivity(Intent(applicationContext, TestActivity::class.java))
         }
+
+        val data = arrayOf("Oulu", "Helsinki", "Tampere", "Rovaniemi")
+        val reminderAdapter = ReminderAdapter(applicationContext, data)
+        list.adapter = reminderAdapter
     }
 }
